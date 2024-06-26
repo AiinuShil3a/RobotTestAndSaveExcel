@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-06-26T18:35:55.637009" rpa="false" schemaversion="5">
+<suite id="s1" name="testWeb" source="D:\Robottest\testWeb.robot">
+<test id="s1-t1" name="Login success" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:35:56.265394" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:5173/'.</msg>
+<arg>http://localhost:5173/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T18:35:56.265394" elapsed="4.554136"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:00.820540" level="INFO">${TestCase} = TS1</msg>
+<var>${TestCase}</var>
+<arg>TS1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:00.819530" elapsed="0.001010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:00.820995" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button'.</msg>
+<arg>//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:00.820995" elapsed="0.036472"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:00.858483" level="INFO">${Username} = Supphalak.sm1@gmail.com</msg>
+<var>${Username}</var>
+<arg>Supphalak.sm1@gmail.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:00.858483" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:00.858483" level="INFO">${Password} = 12345678</msg>
+<var>${Password}</var>
+<arg>12345678</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:00.858483" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:00.859475" level="INFO">Typing text 'Supphalak.sm1@gmail.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:00.859475" elapsed="0.115677"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:00.975152" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:00.975152" elapsed="0.076220"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:01.052111" level="INFO">Clicking element '//*[@id="Get-Started"]/div/form/div[4]/input'.</msg>
+<arg>//*[@id="Get-Started"]/div/form/div[4]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.052111" elapsed="0.043965"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:01.124513" level="INFO">Element 'id=avatarButton' is displayed.</msg>
+<arg>id=avatarButton</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.096076" elapsed="0.028437"/>
+</kw>
+<msg time="2024-06-26T18:36:01.124513" level="INFO">${avatarButton} = True</msg>
+<var>${avatarButton}</var>
+<arg>Element Should Be Visible</arg>
+<arg>id=avatarButton</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.096076" elapsed="0.028437"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${avatarButton}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.125289" elapsed="0.000264"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-06-26T18:36:01.125767" level="INFO">${status} = PASSED</msg>
+<var>${status}</var>
+<arg>${avatarButton}==True</arg>
+<arg>PASSED</arg>
+<arg>FAILED</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.125767" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-06-26T18:36:01.125767" level="INFO">${actual} = Show Avatar before login</msg>
+<var>${actual}</var>
+<arg>${avatarButton}==True</arg>
+<arg>Show Avatar before login</arg>
+<arg>Avatar does not appear</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.125767" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-26T18:36:01.125767" level="INFO">${date} = 2024-06-26</msg>
+<var>${date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.125767" elapsed="0.000000"/>
+</kw>
+<kw name="Write Test Result To Excel TS1">
+<kw name="Create Excel Document" owner="ExcelLibrary">
+<arg>${EXCEL_FILE}</arg>
+<doc>Creates new excel document.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.127771" elapsed="0.001070"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>1</arg>
+<arg>1</arg>
+<arg>Test Cases</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Username</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>1</arg>
+<arg>3</arg>
+<arg>Password</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>1</arg>
+<arg>4</arg>
+<arg>Expected</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>1</arg>
+<arg>5</arg>
+<arg>Actual</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>1</arg>
+<arg>6</arg>
+<arg>Result (pass, fail)</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>1</arg>
+<arg>7</arg>
+<arg>Date</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>1</arg>
+<arg>8</arg>
+<arg>Tester</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>2</arg>
+<arg>1</arg>
+<arg>${TestCase}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>2</arg>
+<arg>2</arg>
+<arg>${Username}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>2</arg>
+<arg>3</arg>
+<arg>${Password}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>2</arg>
+<arg>4</arg>
+<arg>Show Avatar before login</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>2</arg>
+<arg>5</arg>
+<arg>${actual}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>2</arg>
+<arg>6</arg>
+<arg>${status}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>2</arg>
+<arg>7</arg>
+<arg>${date}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>2</arg>
+<arg>8</arg>
+<arg>${TESTER_NAME}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.000000"/>
+</kw>
+<kw name="Save Excel Document" owner="ExcelLibrary">
+<arg>${EXCEL_FILE}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.128841" elapsed="0.010887"/>
+</kw>
+<kw name="Close All Excel Documents" owner="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.139728" elapsed="0.000988"/>
+</kw>
+<arg>${TestCase}</arg>
+<arg>${Username}</arg>
+<arg>${Password}</arg>
+<arg>${status}</arg>
+<arg>${date}</arg>
+<arg>${TESTER_NAME}</arg>
+<arg>${actual}</arg>
+<status status="PASS" start="2024-06-26T18:36:01.125767" elapsed="0.014949"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T18:36:01.140716" elapsed="2.147031"/>
+</kw>
+<doc>ทดสอบการ Login</doc>
+<status status="PASS" start="2024-06-26T18:35:56.264395" elapsed="7.024454"/>
+</test>
+<test id="s1-t2" name="Login No input Username" line="32">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:03.288970" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:5173/'.</msg>
+<arg>http://localhost:5173/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T18:36:03.288970" elapsed="4.637302"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:07.927163" level="INFO">${TestCase} = TS2</msg>
+<var>${TestCase}</var>
+<arg>TS2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:07.927163" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:07.927163" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button'.</msg>
+<arg>//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:07.927163" elapsed="0.037240"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:07.965441" level="INFO">${Username} = </msg>
+<var>${Username}</var>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:07.964403" elapsed="0.001038"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:07.965441" level="INFO">${Password} = 12345678</msg>
+<var>${Password}</var>
+<arg>12345678</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:07.965441" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:07.965441" level="INFO">Typing text '' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:07.965441" elapsed="0.052819"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:08.018260" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.018260" elapsed="0.066558"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:08.084818" level="INFO">Clicking element '//*[@id="Get-Started"]/div/form/div[4]/input'.</msg>
+<arg>//*[@id="Get-Started"]/div/form/div[4]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.084818" elapsed="0.061418"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:08.161380" level="INFO">Element '//*[@id="Get-Started"]/div/form/h3' is displayed.</msg>
+<arg>//*[@id="Get-Started"]/div/form/h3</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.147864" elapsed="0.013516"/>
+</kw>
+<msg time="2024-06-26T18:36:08.161380" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//*[@id="Get-Started"]/div/form/h3</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.147864" elapsed="0.013516"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.161380" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-06-26T18:36:08.161380" level="INFO">${status} = PASSED</msg>
+<var>${status}</var>
+<arg>${result}==True</arg>
+<arg>PASSED</arg>
+<arg>FAILED</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.161380" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-06-26T18:36:08.170471" level="INFO">${actual} = Please fill out this field in input Email</msg>
+<var>${actual}</var>
+<arg>${result}==True</arg>
+<arg>Please fill out this field in input Email</arg>
+<arg>Login Success</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.161380" elapsed="0.009091"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-26T18:36:08.170471" level="INFO">${date} = 2024-06-26</msg>
+<var>${date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.170471" elapsed="0.000000"/>
+</kw>
+<kw name="Write Test Result To Excel TS2">
+<kw name="Open Excel Document" owner="ExcelLibrary">
+<arg>${EXCEL_FILE}</arg>
+<arg>doc_id=doc1</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.171361" elapsed="0.011802"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>3</arg>
+<arg>1</arg>
+<arg>${TestCase}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.183163" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>3</arg>
+<arg>2</arg>
+<arg>${Username}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.183163" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>3</arg>
+<arg>3</arg>
+<arg>${Password}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.183163" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>3</arg>
+<arg>4</arg>
+<arg>Please fill out this field in input Email</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.184151" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>3</arg>
+<arg>5</arg>
+<arg>${actual}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.184151" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>3</arg>
+<arg>6</arg>
+<arg>${status}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.184151" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>3</arg>
+<arg>7</arg>
+<arg>${date}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.184151" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>3</arg>
+<arg>8</arg>
+<arg>${TESTER_NAME}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.184151" elapsed="0.000999"/>
+</kw>
+<kw name="Save Excel Document" owner="ExcelLibrary">
+<arg>${EXCEL_FILE}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.185150" elapsed="0.005488"/>
+</kw>
+<kw name="Close All Excel Documents" owner="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.190638" elapsed="0.000000"/>
+</kw>
+<arg>${TestCase}</arg>
+<arg>${Username}</arg>
+<arg>${Password}</arg>
+<arg>${status}</arg>
+<arg>${date}</arg>
+<arg>${TESTER_NAME}</arg>
+<arg>${actual}</arg>
+<status status="PASS" start="2024-06-26T18:36:08.171361" elapsed="0.020271"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T18:36:08.191632" elapsed="2.119194"/>
+</kw>
+<doc>ทดสอบการ Login Email is null</doc>
+<status status="PASS" start="2024-06-26T18:36:03.288970" elapsed="7.021856"/>
+</test>
+<test id="s1-t3" name="Login No input Password" line="51">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:10.310826" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:5173/'.</msg>
+<arg>http://localhost:5173/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T18:36:10.310826" elapsed="3.896923"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:14.208724" level="INFO">${TestCase} = TS3</msg>
+<var>${TestCase}</var>
+<arg>TS3</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.207749" elapsed="0.000975"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:14.209154" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button'.</msg>
+<arg>//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.209154" elapsed="0.036250"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:14.245404" level="INFO">${Username} = Supphalak.sm1@gmail.com</msg>
+<var>${Username}</var>
+<arg>Supphalak.sm1@gmail.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.245404" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:14.246455" level="INFO">${Password} = </msg>
+<var>${Password}</var>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.246455" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:14.246455" level="INFO">Typing text 'Supphalak.sm1@gmail.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.246455" elapsed="0.102757"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:14.349212" level="INFO">Typing text '' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.349212" elapsed="0.061895"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:14.412124" level="INFO">Clicking element '//*[@id="Get-Started"]/div/form/div[4]/input'.</msg>
+<arg>//*[@id="Get-Started"]/div/form/div[4]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.411107" elapsed="0.051551"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:14.485898" level="INFO">Element '//*[@id="Get-Started"]/div/form/h3' is displayed.</msg>
+<arg>//*[@id="Get-Started"]/div/form/h3</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.463666" elapsed="0.022652"/>
+</kw>
+<msg time="2024-06-26T18:36:14.486318" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//*[@id="Get-Started"]/div/form/h3</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.463666" elapsed="0.022652"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.486318" elapsed="0.000841"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-06-26T18:36:14.487159" level="INFO">${status} = PASSED</msg>
+<var>${status}</var>
+<arg>${result}==True</arg>
+<arg>PASSED</arg>
+<arg>FAILED</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.487159" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-06-26T18:36:14.487907" level="INFO">${actual} = Please fill out this field in input Password</msg>
+<var>${actual}</var>
+<arg>${result}==True</arg>
+<arg>Please fill out this field in input Password</arg>
+<arg>Login Success</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.487907" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-26T18:36:14.487907" level="INFO">${date} = 2024-06-26</msg>
+<var>${date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.487907" elapsed="0.000000"/>
+</kw>
+<kw name="Write Test Result To Excel TS3">
+<kw name="Open Excel Document" owner="ExcelLibrary">
+<arg>${EXCEL_FILE}</arg>
+<arg>doc_id=doc1</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.488958" elapsed="0.011433"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>4</arg>
+<arg>1</arg>
+<arg>${TestCase}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.501437" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>4</arg>
+<arg>2</arg>
+<arg>${Username}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.501437" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>4</arg>
+<arg>3</arg>
+<arg>${Password}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.501437" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>4</arg>
+<arg>4</arg>
+<arg>Please fill out this field in input Password</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.501437" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>4</arg>
+<arg>5</arg>
+<arg>${actual}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.502447" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>4</arg>
+<arg>6</arg>
+<arg>${status}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.502447" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>4</arg>
+<arg>7</arg>
+<arg>${date}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.502447" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>4</arg>
+<arg>8</arg>
+<arg>${TESTER_NAME}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.502447" elapsed="0.000000"/>
+</kw>
+<kw name="Save Excel Document" owner="ExcelLibrary">
+<arg>${EXCEL_FILE}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.503437" elapsed="0.011824"/>
+</kw>
+<kw name="Close All Excel Documents" owner="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.515261" elapsed="0.000000"/>
+</kw>
+<arg>${TestCase}</arg>
+<arg>${Username}</arg>
+<arg>${Password}</arg>
+<arg>${status}</arg>
+<arg>${date}</arg>
+<arg>${TESTER_NAME}</arg>
+<arg>${actual}</arg>
+<status status="PASS" start="2024-06-26T18:36:14.488958" elapsed="0.026303"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T18:36:14.516301" elapsed="2.092931"/>
+</kw>
+<doc>ทดสอบการ Login Password is null</doc>
+<status status="PASS" start="2024-06-26T18:36:10.310826" elapsed="6.298406"/>
+</test>
+<test id="s1-t4" name="Login input Password less 8 number" line="70">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:16.609232" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:5173/'.</msg>
+<arg>http://localhost:5173/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T18:36:16.609232" elapsed="3.816642"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:20.425874" level="INFO">${TestCase} = TS4</msg>
+<var>${TestCase}</var>
+<arg>TS4</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.425874" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:20.426883" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button'.</msg>
+<arg>//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.426883" elapsed="0.036181"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:20.464052" level="INFO">${Username} = Supphalak.sm1@gmail.com</msg>
+<var>${Username}</var>
+<arg>Supphalak.sm1@gmail.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.464052" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-26T18:36:20.464052" level="INFO">${Password} = 1234</msg>
+<var>${Password}</var>
+<arg>1234</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.464052" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:20.465062" level="INFO">Typing text 'Supphalak.sm1@gmail.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.464052" elapsed="0.127127"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:20.596315" level="INFO">Typing text '1234' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.596315" elapsed="0.062456"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:20.658771" level="INFO">Clicking element '//*[@id="Get-Started"]/div/form/div[4]/input'.</msg>
+<arg>//*[@id="Get-Started"]/div/form/div[4]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.658771" elapsed="0.053704"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:20.729639" level="INFO">Element '//*[@id="Get-Started"]/div/form/h3' is displayed.</msg>
+<arg>//*[@id="Get-Started"]/div/form/h3</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.713433" elapsed="0.016206"/>
+</kw>
+<msg time="2024-06-26T18:36:20.729639" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//*[@id="Get-Started"]/div/form/h3</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.712475" elapsed="0.017164"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.730645" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-06-26T18:36:20.730645" level="INFO">${status} = PASSED</msg>
+<var>${status}</var>
+<arg>${result}==True</arg>
+<arg>PASSED</arg>
+<arg>FAILED</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.730645" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-06-26T18:36:20.731645" level="INFO">${actual} = Password less than 8 characters</msg>
+<var>${actual}</var>
+<arg>${result}==True</arg>
+<arg>Password less than 8 characters</arg>
+<arg>Login Success</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.731645" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-26T18:36:20.731645" level="INFO">${date} = 2024-06-26</msg>
+<var>${date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.731645" elapsed="0.000000"/>
+</kw>
+<kw name="Write Test Result To Excel TS4">
+<kw name="Open Excel Document" owner="ExcelLibrary">
+<arg>${EXCEL_FILE}</arg>
+<arg>doc_id=doc1</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.732638" elapsed="0.010673"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>5</arg>
+<arg>1</arg>
+<arg>${TestCase}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.743311" elapsed="0.000995"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>5</arg>
+<arg>2</arg>
+<arg>${Username}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.744306" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>5</arg>
+<arg>3</arg>
+<arg>${Password}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.744306" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>5</arg>
+<arg>4</arg>
+<arg>Password less than 8 characters</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.744306" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>5</arg>
+<arg>5</arg>
+<arg>${actual}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.744306" elapsed="0.000999"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>5</arg>
+<arg>6</arg>
+<arg>${status}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.745305" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>5</arg>
+<arg>7</arg>
+<arg>${date}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.745305" elapsed="0.000000"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>5</arg>
+<arg>8</arg>
+<arg>${TESTER_NAME}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.745305" elapsed="0.000000"/>
+</kw>
+<kw name="Save Excel Document" owner="ExcelLibrary">
+<arg>${EXCEL_FILE}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.745305" elapsed="0.013356"/>
+</kw>
+<kw name="Close All Excel Documents" owner="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.758895" elapsed="0.000000"/>
+</kw>
+<arg>${TestCase}</arg>
+<arg>${Username}</arg>
+<arg>${Password}</arg>
+<arg>${status}</arg>
+<arg>${date}</arg>
+<arg>${TESTER_NAME}</arg>
+<arg>${actual}</arg>
+<status status="PASS" start="2024-06-26T18:36:20.732638" elapsed="0.026257"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T18:36:20.758895" elapsed="2.106033"/>
+</kw>
+<doc>ทดสอบการ Login Password is less 8 number</doc>
+<status status="PASS" start="2024-06-26T18:36:16.609232" elapsed="6.255696"/>
+</test>
+<status status="PASS" start="2024-06-26T18:35:55.637009" elapsed="27.227919"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="testWeb">testWeb</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
